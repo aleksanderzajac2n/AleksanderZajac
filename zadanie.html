@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekt Sieci Komputerowej</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <p class="author">Aleksander Zając "2n"</p>
+        
+        <h1>Projekt Sieci Komputerowej</h1>
+        
+        <div class="section">
+            <h2>1. Topologia Graficzna</h2>
+            <img src="topologia.PNG" alt="Topologia sieci" class="topology-img">
+        </div>
+        
+        <div class="section">
+            <h2>2. Topologia Opisowa</h2>
+            <ul>
+                <li><strong>Router</strong> – zapewnia dostęp do Internetu.</li>
+                <li><strong>Firewall</strong> – filtruje ruch przychodzący/wychodzący (zabezpieczenie).</li>
+                <li><strong>Switch główny</strong> – odpowiada za routing między podsieciami oraz łączy wszystkie segmenty.</li>
+                <li><strong>Switch 1 i Switch 2</strong> – rozdzielają ruch lokalny w dwóch strefach biura.</li>
+                <li><strong>Serwer</strong> – bezpośrednio połączony ze switchem głównym.</li>
+                <li><strong>Access Pointy</strong> – zapewniają Wi-Fi w obu częściach budynku.</li>
+                <li><strong>Laptopy i komputery</strong> – podłączone do switchy oraz punktów dostępowych.</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>3. Adresacja IP</h2>
+            <p><em>Zakres główny sieci:</em> <code>192.168.1.0/24</code></p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Urządzenie</th>
+                        <th>IP</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Router</td>
+                        <td>192.168.1.1</td>
+                    </tr>
+                    <tr>
+                        <td>Firewall</td>
+                        <td>192.168.1.2</td>
+                    </tr>
+                    <tr>
+                        <td>Switch główny (L3)</td>
+                        <td>192.168.1.3</td>
+                    </tr>
+                    <tr>
+                        <td>Serwer</td>
+                        <td>192.168.1.10</td>
+                    </tr>
+                    <tr>
+                        <td>Access Point 1</td>
+                        <td>192.168.1.20</td>
+                    </tr>
+                    <tr>
+                        <td>Access Point 2</td>
+                        <td>192.168.1.21</td>
+                    </tr>
+                    <tr>
+                        <td>DHCP dla komputerów</td>
+                        <td>192.168.1.100–192.168.1.199</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="section">
+            <h2>4. Lista Sprzętu</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Urządzenie</th>
+                        <th>Model / opis</th>
+                        <th>Ilość</th>
+                        <th>Cena (szt.)</th>
+                        <th>Suma</th>
+                        <th>Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Router ISP</strong></td>
+                        <td>TP-Link Archer VR2100</td>
+                        <td>1</td>
+                        <td>379 zł</td>
+                        <td>379 zł</td>
+                        <td><a href="https://www.x-kom.pl/p/663368-router-tp-link-archer-vr2100-2100mb-s-a-b-g-n-ac.html" target="_blank">Link</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Firewall (pfSense)</strong></td>
+                        <td>Mini PC x86 z 2x LAN</td>
+                        <td>1</td>
+                        <td>1500 zł</td>
+                        <td>1500 zł</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Switch główny (L3)</strong></td>
+                        <td>TP-Link T1600G-28TS</td>
+                        <td>1</td>
+                        <td>800 zł</td>
+                        <td>800 zł</td>
+                        <td><a href="https://www.x-kom.pl/p/127185-switche-tp-link-28p-t1600g-28tstl-sg2424-24x1000mbit4xsfp.html" target="_blank">Link</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Switch L2 (8p)</strong></td>
+                        <td>TP-Link TL-SG108</td>
+                        <td>2</td>
+                        <td>109 zł</td>
+                        <td>218 zł</td>
+                        <td><a href="https://www.x-kom.pl/p/127183-switche-tp-link-8p-tl-sg108-metal-8x10-100-1000mbit.html" target="_blank">Link</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Access Point</strong></td>
+                        <td>TP-Link EAP245 (Wi-Fi 5)</td>
+                        <td>2</td>
+                        <td>373 zł</td>
+                        <td>746 zł</td>
+                        <td><a href="https://www.x-kom.pl/p/359141-access-point-tp-link-eap245-80211a-b-g-n-ac-1750mb-s-poe.html" target="_blank">Link</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Serwer Mini (np. Intel NUC)</strong></td>
+                        <td>Intel NUC lub alternatywa</td>
+                        <td>1</td>
+                        <td>1400 zł</td>
+                        <td>1400 zł</td>
+                        <td><a href="https://www.x-kom.pl/p/475883-nettop-mini-pc-intel-nuc-i7-8559u-25sata-m2-box.html" target="_blank">Link</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Okablowanie Cat.6</strong></td>
+                        <td>Patchcordy 1–10m</td>
+                        <td>30</td>
+                        <td>10 zł</td>
+                        <td>300 zł</td>
+                        <td><a href="https://www.atel.com.pl/produkt.php?hash=05900" target="_blank">Link</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>RAZEM – netto</strong></td>
+                        <td colspan="3"></td>
+                        <td><strong>5343 zł</strong></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="section">
+            <h2>5. Robocizna + VAT</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Opis prac</th>
+                        <th>Ilość</th>
+                        <th>Cena netto</th>
+                        <th>VAT (23%)</th>
+                        <th>Brutto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Montaż sprzętu + konfiguracja</td>
+                        <td>20 h × 100 zł/h</td>
+                        <td>2000 zł</td>
+                        <td>460 zł</td>
+                        <td>2460 zł</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="section">
+            <h2>6. Cel projektu</h2>
+            <p><em>Celem projektu jest zaprojektowanie i wykonanie stabilnej, bezpiecznej i skalowalnej sieci komputerowej dla budynku biurowego, w oparciu o sprzęt klasy biznesowej.</em></p>
+            
+            <h3>Szczegółowe cele:</h3>
+            <ul>
+                <li><strong>Stabilność:</strong> dobrej klasy sprzęt + zapas portów.</li>
+                <li><strong>Bezpieczeństwo:</strong> firewall + możliwość segmentacji sieci (VLAN).</li>
+                <li><strong>Wydajność:</strong> szybkie przełączniki i serwer lokalny.</li>
+                <li><strong>Skalowalność:</strong> łatwa rozbudowa (kolejne AP/switche/urządzenia).</li>
+                <li><strong>Koszty:</strong> zoptymalizowane, bez zbędnych wydatków.</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>7. Podsumowanie Kosztów</h2>
+            <table class="summary-table">
+                <thead>
+                    <tr>
+                        <th>Pozycja</th>
+                        <th>Kwota netto</th>
+                        <th>VAT (23%)</th>
+                        <th>Kwota brutto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sprzęt</td>
+                        <td>5343 zł</td>
+                        <td>1228,89 zł</td>
+                        <td>6571,89 zł</td>
+                    </tr>
+                    <tr>
+                        <td>Robocizna</td>
+                        <td>2000 zł</td>
+                        <td>460 zł</td>
+                        <td>2460 zł</td>
+                    </tr>
+                    <tr>
+                        <td><strong>RAZEM</strong></td>
+                        <td colspan="2"></td>
+                        <td><strong>9031,89 zł</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
